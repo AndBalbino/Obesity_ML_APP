@@ -69,6 +69,10 @@ with st.form("prediction_form"):
             st.selectbox("Histórico familiar de obesidade?", list(yes_no.keys()))
         ]
 
+        FAVC = yes_no[
+            st.selectbox("Consome alimentos altamente calóricos com frequência?", list(yes_no.keys()))
+        ]
+
     st.divider()
     st.subheader("🥗 Hábitos Alimentares")
 
@@ -97,12 +101,8 @@ with st.form("prediction_form"):
             "Sempre": "Always"
         }[st.selectbox("Consome lanches entre refeições?", 
                        ["Não", "Às vezes", "Frequentemente", "Sempre"])]
-        
-        yes_no = {"Sim": "yes", "Não": "no"}
 
-        FAVC = yes_no[
-            st.selectbox("Consome alimentos altamente calóricos com frequência?", list(yes_no.keys()))
-        ]
+
 
     with col4:
         CH2O = {
